@@ -7,7 +7,7 @@ A collaction of loading indicators animated with CSS/CSS3 from users' contributi
 
 
 ## Contribute
-Welcome to share us your animation inspiritions.
+Welcome to share us your animation inspiritions!
 
 
 [Contribute your code here](https://github.com/fotock/Loader-Kit/issues/1)
