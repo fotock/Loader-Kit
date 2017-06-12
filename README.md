@@ -6,13 +6,18 @@ A collaction of loading indicators animated with CSS/CSS3 from users' contributi
 [Open demo page](https://sanfriend.com/loader-kit.html)
 
 
-
 ## Contribute
 Welcome to share us your animation inspiritions.
+
+
 [Contribute your code here](https://github.com/fotock/Loader-Kit/issues/1)
+
+
 
 ## License
 MIT License
+
+
 
 Copyright (c) 2017 Shelley Shyan
 
