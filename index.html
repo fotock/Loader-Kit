@@ -1,55 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>LoaderKit | CSS Loaders</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
-
-    <!-- Demo styles -->
-    <style>
-    html, body { position: relative; height: 100%; }
-    body { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 16px; color:#fff; margin: 0; padding: 0; }
-    a:link, a:visited {text-decoration: none;color:rgba(255,255,255,.65);}
-    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {bottom:3vh;}
-    .swiper-pagination-bullet {width:10px; height:10px; background:#ddd;}
-    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {margin:3px 5px;}
-    .swiper-pagination-bullet-active {transform:scale(1.4);}
-    .swiper-button-prev { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E"); padding:2vw;}
-    .swiper-button-next {background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E"); padding:2vw;}
-
-    .source {position:absolute; top:4vh; left:0; width:100%;font-size:1.5em;}
-    .source:before {content: "<> "; font-family:tahoma; color: rgba(255,255,255,.34);}
-
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-
-
-
-
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+<meta name="keywords" content="css, css3, spinner, loader, kit, html5"/>
+<meta name="description" content="css, css3, spinner, loader, kit, html5, inspiration"/>
+<meta property="og:title" content="LoaderKit"/>
+<meta property="og:description" content="Loader Kit"/>
+<meta property="og:url" content="https://sanfriend.com/loader-kit.html"/>
+<meta property="og:site_name" content="Sanfriend"/>
+<title>LoaderKit | CSS Loaders</title>
+<link rel="shortcut icon" type="image/png" href="//sanfriend.com/images/logo-s.png" />
+<link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet" />
+<style>
 /** ---------------------fire loader --------------**/
 #fire-loader {
   position: fixed;
@@ -731,10 +694,10 @@
   background-color: #27ae60;
   }
   50% {
-    background-color: #9b59b6;
+    background-color: #c0392b;
   }
   100% {
-    background-color: #c0392b;
+    background-color: #ffa700;
   }
 }
 /** ---------------------/.windows spinner--------------**/
@@ -760,7 +723,7 @@
   100% {
     transform: rotate(360deg);
   }
-} 
+}
 /** ---------------------/.ring spinner--------------**/
 
 
@@ -799,7 +762,7 @@
     width: 5%;
     height: 15%;
     background-color: #FFF;
-    animation: wave-loader 1s cubic-bezier(0.2, 0.68, 0.18, 1.08) infinite; 
+    animation: wave-loader 1s cubic-bezier(0.2, 0.68, 0.18, 1.08) infinite;
 }
 .wave-loader .bar-1 { margin-left: 30%; }
 .wave-loader .bar-1 { animation-delay: 0.1s; }
@@ -810,26 +773,94 @@
 
 @keyframes wave-loader {
   0%,100% { transform: scaleY(1); }
-  50% { transform: scaleY(2); } 
+  50% { transform: scaleY(2); }
 }
 /** ---------------------/.wave loader--------------**/
 
 
+/** ---------------------dot loader--------------**/
+/** :not(:required) hides this rule from IE9- **/
+.dot-loader:not(:required) {
+  overflow: hidden;
+  position: relative;
+  text-indent: -9999px;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: transparent;
+  border-radius: 100%;
+  box-shadow: #d62d20 -14px -14px 0 7px, #ffa700 14px -14px 0 7px, #008744 14px 14px 0 7px, #0057e7 -14px 14px 0 7px;
+  animation: dot-loader 5s infinite ease-in-out;
+  transform-origin: 50% 50%;
+}
 
-/** ---------------------this demo--------------**/
-.slider-loader {margin-top:-100px}
-.load-bar {margin-top:-100px;}
-div:not(.swiper-slide-active) >#color-spinner,
-div:not(.swiper-slide-active) >#color-spinner:before,
-div:not(.swiper-slide-active) >#color-spinner:after,
-div:not(.swiper-slide-active) >.slider-loader,
-div:not(.swiper-slide-active) >.load-bar >.bar,
-div:not(.swiper-slide-active) >#fire-loader> div {animation:none !important;}
+@keyframes dot-loader {
+  0% {
+    box-shadow: #d62d20 -14px -14px 0 7px, #ffa700 14px -14px 0 7px, #008744 14px 14px 0 7px, #0057e7 -14px 14px 0 7px;
+  }
+  8.33% {
+    box-shadow: #d62d20 14px -14px 0 7px, #ffa700 14px -14px 0 7px, #008744 14px 14px 0 7px, #0057e7 -14px 14px 0 7px;
+  }
+  16.67% {
+    box-shadow: #d62d20 14px 14px 0 7px, #ffa700 14px 14px 0 7px, #008744 14px 14px 0 7px, #0057e7 -14px 14px 0 7px;
+  }
+  25% {
+    box-shadow: #d62d20 -14px 14px 0 7px, #ffa700 -14px 14px 0 7px, #008744 -14px 14px 0 7px, #0057e7 -14px 14px 0 7px;
+  }
+  33.33% {
+    box-shadow: #d62d20 -14px -14px 0 7px, #ffa700 -14px 14px 0 7px, #008744 -14px -14px 0 7px, #0057e7 -14px -14px 0 7px;
+  }
+  41.67% {
+    box-shadow: #d62d20 14px -14px 0 7px, #ffa700 -14px 14px 0 7px, #008744 -14px -14px 0 7px, #0057e7 14px -14px 0 7px;
+  }
+  50% {
+    box-shadow: #d62d20 14px 14px 0 7px, #ffa700 -14px 14px 0 7px, #008744 -14px -14px 0 7px, #0057e7 14px -14px 0 7px;
+  }
+  58.33% {
+    box-shadow: #d62d20 -14px 14px 0 7px, #ffa700 -14px 14px 0 7px, #008744 -14px -14px 0 7px, #0057e7 14px -14px 0 7px;
+  }
+  66.67% {
+    box-shadow: #d62d20 -14px -14px 0 7px, #ffa700 -14px -14px 0 7px, #008744 -14px -14px 0 7px, #0057e7 14px -14px 0 7px;
+  }
+  75% {
+    box-shadow: #d62d20 14px -14px 0 7px, #ffa700 14px -14px 0 7px, #008744 14px -14px 0 7px, #0057e7 14px -14px 0 7px;
+  }
+  83.33% {
+    box-shadow: #d62d20 14px 14px 0 7px, #ffa700 14px -14px 0 7px, #008744 14px 14px 0 7px, #0057e7 14px 14px 0 7px;
+  }
+  91.67% {
+    box-shadow: #d62d20 -14px 14px 0 7px, #ffa700 14px -14px 0 7px, #008744 14px 14px 0 7px, #0057e7 -14px 14px 0 7px;
+  }
+  100% {
+    box-shadow: #d62d20 -14px -14px 0 7px, #ffa700 14px -14px 0 7px, #008744 14px 14px 0 7px, #0057e7 -14px 14px 0 7px;
+  }
+}
+/** ---------------------/.dot loader--------------**/
 
-    </style>
+/** ---------------------circle spinner--------------**/
+.circle-spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  margin-top: -30px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  border-top-color: #ffa700;
+  animation: circle-spinner .9s linear infinite;
+}
+@keyframes circle-spinner {
+  to {transform: rotate(360deg);}
+}
+/** ---------------------/.circle spinner--------------**/
+</style>
+<link href="//sanfriend.com/css/loader-kit-demo.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide" style="background: #1C78C5;">
@@ -888,7 +919,7 @@ div:not(.swiper-slide-active) >#fire-loader> div {animation:none !important;}
             </div>
 
             <div class="swiper-slide" style="background: #9F78C1">
-                <div class="source"><a href="http://fareco.github.io/css-loader" title="" target="_blank">Wave</a></div>
+                <div class="source"><a href="#" title="" target="_blank">Wave</a></div>
                 <div class="wave-loader">
                     <div class="bar-1"></div>
                     <div class="bar-2"></div>
@@ -897,26 +928,46 @@ div:not(.swiper-slide-active) >#fire-loader> div {animation:none !important;}
                     <div class="bar-5"></div>
                 </div>
             </div>
+
+            <div class="swiper-slide" style="background:#000">
+                <div class="source"><a href="#" title="" target="_blank">Dot Loader</a></div>
+                <div class="dot-loader"></div>
+            </div>
+
+            <div class="swiper-slide" style="background:#3FA9F5">
+                <div class="source"><a href="#" title="" target="_blank">Circle Spinner</a></div>
+                <div class="circle-spinner"></div>
+            </div>
+
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
 
-    <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.min.js"></script>
+    <a href="#" class="logo"></a>
+    <a href="https://github.com/fotock/Loader-Kit" class="github">View on GitHub<span class="underline"></span></a>
 
-    <!-- Initialize Swiper -->
-    <script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        slidesPerView: 1,
-        paginationClickable: true,
-        spaceBetween: 30,
-        effect: 'fade',
-        loop: true
-    });
-    </script>
+<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    slidesPerView: 1,
+    paginationClickable: true,
+    spaceBetween: 30,
+    effect: 'fade',
+    loop: true
+});
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-38866546-2', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>
